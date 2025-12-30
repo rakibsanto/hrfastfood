@@ -13,10 +13,16 @@ export default function Footer() {
                                 <span className="text-[10px] uppercase font-bold text-white tracking-[0.2em]">It's A Live Kitchen</span>
                             </div>
                         </div>
-                        <p className="text-zinc-400 max-w-sm">
-                            <span className="text-white font-bold block mb-1">Location: বড় ব্রিজ সংলগ্ন (একতা মাইকের বিপরীতে )</span>
-                            <span className="text-white font-bold">Phone: 01745-933455</span>
-                        </p>
+                        <div className="space-y-3">
+                            <div className="flex gap-3 text-sm">
+                                <span className="text-orange-500 font-bold uppercase tracking-wider min-w-[80px]">Location:</span>
+                                <span className="text-zinc-490">Near Boro Bridge (Opposite of Ekota Mike Service)</span>
+                            </div>
+                            <div className="flex gap-3 text-sm">
+                                <span className="text-orange-500 font-bold uppercase tracking-wider min-w-[80px]">Phone:</span>
+                                <span className="text-zinc-490">01745-933455</span>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="col-span-1 md:col-span-2 h-[300px] rounded-2xl overflow-hidden border border-white/10 mt-0">
