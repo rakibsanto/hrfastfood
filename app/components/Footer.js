@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <footer className="bg-zinc-950 border-t border-white/5 pt-20 pb-10">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 items-start">
                     <div className="col-span-1 md:col-span-2">
                         <div className="flex items-center gap-3 mb-6">
                             <img src="/logo.png" alt="HR Fast Food Logo" className="w-10 h-10 rounded-full" />
@@ -16,7 +16,7 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div className="col-span-1 md:col-span-2 h-48 md:h-full min-h-[200px] rounded-2xl overflow-hidden border border-white/10">
+                    <div className="col-span-1 md:col-span-2 h-[300px] rounded-2xl overflow-hidden border border-white/10 mt-0">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.8967520421253!2d89.23536531109968!3d24.007987878168275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9b0071ebbf13%3A0x12d7c4f1729555d2!2sHR%20Fast%20Food!5e0!3m2!1sen!2sbd!4v1735544615234!5m2!1sen!2sbd"
                             width="100%"
