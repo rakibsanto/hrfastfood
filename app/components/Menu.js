@@ -44,7 +44,7 @@ const FOOD_ITEMS = [
     {
         id: 5,
         name: 'Chicken Cheese Meat Box Medium',
-        price: 1700,
+        price: 170,
         category: 'Meat Box',
         img: '/meatbox.png',
         description: 'Layers of fries, grilled chicken, sausages, and melted cheese.',
