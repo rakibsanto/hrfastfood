@@ -16,24 +16,17 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div>
-                        <h4 className="font-bold uppercase tracking-widest mb-6">Explore</h4>
-                        <ul className="space-y-4 text-zinc-400">
-                            <li className="hover:text-white cursor-pointer transition-colors">Menu</li>
-                            <li className="hover:text-white cursor-pointer transition-colors">Locations</li>
-                            <li className="hover:text-white cursor-pointer transition-colors">About Us</li>
-                            <li className="hover:text-white cursor-pointer transition-colors">Careers</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 className="font-bold uppercase tracking-widest mb-6">Support</h4>
-                        <ul className="space-y-4 text-zinc-400">
-                            <li className="hover:text-white cursor-pointer transition-colors">Contact</li>
-                            <li className="hover:text-white cursor-pointer transition-colors">FAQ</li>
-                            <li className="hover:text-white cursor-pointer transition-colors">Privacy Policy</li>
-                            <li className="hover:text-white cursor-pointer transition-colors">Terms of Service</li>
-                        </ul>
+                    <div className="col-span-1 md:col-span-2 h-48 md:h-full min-h-[200px] rounded-2xl overflow-hidden border border-white/10">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116410.53696229497!2d89.17647209999999!3d24.004459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe84dec6030999%3A0x6a0f443831818140!2sPabna!5e0!3m2!1sen!2sbd!4v1703923456789!5m2!1sen!2sbd"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            className="w-full h-full border-0 transition-all duration-500"
+                        ></iframe>
                     </div>
                 </div>
 
