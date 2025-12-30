@@ -11,7 +11,8 @@ export default function Footer() {
                             <h2 className="text-2xl font-black italic tracking-tighter">HR <span className="text-orange-500">FAST FOOD</span></h2>
                         </div>
                         <p className="text-zinc-400 max-w-sm">
-                            <span className="text-white font-bold">It's A Live Kitchen.</span> Redefining the fast food experience with premium ingredients, cutting-edge flavors, and seamless digital ordering.
+                            <span className="text-white font-bold block mb-1">Location: Pabna</span>
+                            <span className="text-white font-bold">Phone: 01745-933455</span>
                         </p>
                     </div>
 

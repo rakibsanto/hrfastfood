@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
 
-const CATEGORIES = ["All", "Meat Box", "Burgers", "Momos", "Chicken Nuggets", "Meatball", "Mix Chips", "Drinks"];
+const CATEGORIES = ["All", "Burgers", "Meat Box", "Momos", "Chicken Nuggets", "Meatball", "Mix Chips"];
 
 const FOOD_ITEMS = [
     {
         id: 1,
-        name: 'Loaded Meat Box',
-        price: 15.99,
+        name: 'Chicken Meat Box Small',
+        price: 80,
         category: 'Meat Box',
         img: '/meatbox.png',
         description: 'Layers of fries, grilled chicken, sausages, and melted cheese.',
@@ -16,69 +16,150 @@ const FOOD_ITEMS = [
     },
     {
         id: 2,
-        name: 'Neon Double Smash',
-        price: 10.99,
-        originalPrice: 12.99,
+        name: 'Chicken Meat Box Medium',
+        price: 140,
+        category: 'Meat Box',
+        img: '/meatbox.png',
+        description: 'Layers of fries, grilled chicken, sausages, and melted cheese.',
+        tags: ['Heavy', 'Best Seller']
+    },
+    {
+        id: 3,
+        name: 'Chicken Meat Box Large',
+        price: 170,
+        category: 'Meat Box',
+        img: '/meatbox.png',
+        description: 'Layers of fries, grilled chicken, sausages, and melted cheese.',
+        tags: ['Heavy', 'Best Seller']
+    },
+    {
+        id: 4,
+        name: 'Chicken Cheese Meat Box Small',
+        price: 110,
+        category: 'Meat Box',
+        img: '/meatbox.png',
+        description: 'Layers of fries, grilled chicken, sausages, and melted cheese.',
+        tags: ['Heavy', 'Best Seller']
+    },
+    {
+        id: 5,
+        name: 'Chicken Cheese Meat Box Medium',
+        price: 1700,
+        category: 'Meat Box',
+        img: '/meatbox.png',
+        description: 'Layers of fries, grilled chicken, sausages, and melted cheese.',
+        tags: ['Heavy', 'Best Seller']
+    },
+    {
+        id: 6,
+        name: 'Chicken Cheese Meat Box Large',
+        price: 200,
+        category: 'Meat Box',
+        img: '/meatbox.png',
+        description: 'Layers of fries, grilled chicken, sausages, and melted cheese.',
+        tags: ['Heavy', 'Best Seller']
+    },
+    {
+        id: 7,
+        name: 'Mini Burger',
+        price: 50,
+        // originalPrice: 12.99,
         category: 'Burgers',
         img: '/burger.png',
         description: 'Double beef patty, cheddar, spicy sauce.',
         tags: ['Spicy', 'Popular']
     },
     {
-        id: 3,
-        name: 'Spicy Chicken Momos',
-        price: 8.99,
+        id: 8,
+        name: 'Naga Burger',
+        price: 70,
+        category: 'Burgers',
+        img: '/burger.png',
+        description: 'Double beef patty, cheddar, spicy sauce.',
+        tags: ['Spicy', 'Popular']
+    },
+    {
+        id: 9,
+        name: 'Cheese Burger',
+        price: 70,
+        category: 'Burgers',
+        img: '/burger.png',
+        description: 'Double beef patty, cheddar, spicy sauce.',
+        tags: ['Spicy', 'Popular']
+    },
+    {
+        id: 10,
+        name: 'Burger Pizza',
+        price: 100,
+        category: 'Burgers',
+        img: '/burger.png',
+        description: 'Double beef patty, cheddar, spicy sauce.',
+        tags: ['Spicy', 'Popular']
+    },
+    {
+        id: 11,
+        name: 'Chicken Momos',
+        price: 120,
         category: 'Momos',
         img: '/momos.png',
         description: 'Steamed dumplings served with spicy red chutney.',
         tags: ['Steamed', 'Spicy']
     },
     {
-        id: 4,
-        name: 'Classic Smash',
-        price: 9.99,
-        category: 'Burgers',
-        img: '/burger.png',
-        description: 'Single patty, lettuce, tomato.',
-        tags: ['Classic']
+        id: 12,
+        name: 'B-B-Q Momos',
+        price: 120,
+        category: 'Momos',
+        img: '/momos.png',
+        description: 'Steamed dumplings served with spicy red chutney.',
+        tags: ['Steamed', 'Spicy']
     },
     {
-        id: 5,
-        name: 'Crispy Chicken Nuggets',
-        price: 9.99,
+        id: 13,
+        name: 'Chicken Nuggets 3 pcs',
+        price: 60,
         category: 'Chicken Nuggets',
         img: '/nuggets.png',
         description: '10 pcs golden fried nuggets with signature dip.',
         tags: ['Crispy']
     },
     {
-        id: 6,
-        name: 'Glazed Meatballs',
-        price: 7.99,
+        id: 14,
+        name: 'Chicken Nuggets 5 pcs',
+        price: 1000,
+        category: 'Chicken Nuggets',
+        img: '/nuggets.png',
+        description: '10 pcs golden fried nuggets with signature dip.',
+        tags: ['Crispy']
+    },
+    {
+        id: 15,
+        name: 'Meatballs 5 pcs',
+        price: 40,
         category: 'Meatball',
         img: '/meatball.png',
         description: 'Juicy meatballs glazed in teriyaki sauce with sesame.',
         tags: ['Savory']
     },
     {
-        id: 7,
-        name: 'Cyber Mix Chips',
-        price: 5.49,
+        id: 16,
+        name: 'American Mix Chips',
+        price: 90,
         category: 'Mix Chips',
         img: '/fries.png', // Reusing fries image for chips
         description: 'Crispy fries tossed with secret masala mix.',
         tags: ['Spicy']
-    },
-    {
-        id: 8,
-        name: 'Electro Shake',
-        price: 5.99,
-        originalPrice: 6.99,
-        category: 'Drinks',
-        img: '/shake.png',
-        description: 'Strawberry blend with whipped cream.',
-        tags: ['Cold', 'Offer']
     }
+    // {
+    //     id: 17,
+    //     name: 'Electro Shake',
+    //     price: 5.99,
+    //     originalPrice: 6.99,
+    //     category: 'Drinks',
+    //     img: '/shake.png',
+    //     description: 'Strawberry blend with whipped cream.',
+    //     tags: ['Cold', 'Offer']
+    // }
 ];
 
 export default function Menu({ addToCart }) {
