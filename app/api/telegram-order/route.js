@@ -9,11 +9,11 @@ export async function POST(req) {
         const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
         const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
-        if (!BOT_TOKEN || !CHAT_ID || CHAT_ID.includes('your_chat_id')) {
-            return NextResponse.json({
-                success: false,
-                message: "Configuration Error: Missing Telegram Chat ID. Please check .env.local"
-            }, { status: 500 });
+        if (!BOT_TOKEN) {
+            return NextResponse.json({ success: false, message: "Missing TELEGRAM_BOT_TOKEN on server." }, { status: 500 });
+        }
+        if (!CHAT_ID || CHAT_ID.includes('your_chat_id')) {
+            return NextResponse.json({ success: false, message: "Missing TELEGRAM_CHAT_ID on server." }, { status: 500 });
         }
 
         // Sequential Order Number Logic
