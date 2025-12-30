@@ -8,10 +8,13 @@ export default function Footer() {
                     <div className="col-span-1 md:col-span-2">
                         <div className="flex items-center gap-3 mb-6">
                             <img src="/logo.png" alt="HR Fast Food Logo" className="w-10 h-10 rounded-full" />
-                            <h2 className="text-2xl font-black italic tracking-tighter">HR <span className="text-orange-500">FAST FOOD</span></h2>
+                            <div className="flex flex-col">
+                                <h2 className="text-2xl font-black italic tracking-tighter leading-none">HR <span className="text-orange-500">FAST FOOD</span></h2>
+                                <span className="text-[10px] uppercase font-bold text-white tracking-[0.2em]">It's A Live Kitchen</span>
+                            </div>
                         </div>
                         <p className="text-zinc-400 max-w-sm">
-                            <span className="text-white font-bold block mb-1">Location: Pabna</span>
+                            <span className="text-white font-bold block mb-1">Location: বড় ব্রিজ সংলগ্ন (একতা মাইকের বিপরীতে )</span>
                             <span className="text-white font-bold">Phone: 01745-933455</span>
                         </p>
                     </div>
