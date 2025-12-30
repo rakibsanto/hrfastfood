@@ -175,7 +175,7 @@ export default function Menu({ addToCart }) {
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12">
                     <div>
                         <h2 className="text-4xl font-black uppercase text-white mb-2">Our Menu</h2>
-                        <p className="text-zinc-400">Curated specifically for your cravings.</p>
+                        <p className="text-white font-normal">Curated specifically for your cravings.</p>
                     </div>
 
                     {/* Category Filter */}
@@ -218,7 +218,7 @@ export default function Menu({ addToCart }) {
                                 <div className="flex justify-between items-start mb-2">
                                     <div>
                                         <h3 className="text-xl font-bold text-white">{item.name}</h3>
-                                        <p className="text-sm text-zinc-500 line-clamp-2 mb-4 min-h-[2.5rem]">{item.description}</p>
+                                        <p className="text-sm text-white font-normal line-clamp-2 mb-4 min-h-[2.5rem]">{item.description}</p>
                                     </div>
                                     <div className="flex flex-col items-end">
                                         {item.originalPrice && (

@@ -58,7 +58,7 @@ export default function Hero() {
                         It's A <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">Live Kitchen</span>
                     </h2>
-                    <p className="text-zinc-400 text-lg mb-8 max-w-md font-light leading-relaxed">
+                    <p className="text-white text-lg mb-8 max-w-md font-normal leading-relaxed">
                         Precision-grilled smash burgers, artisanal shakes, and fries that defy gravity. Experience the next level of flavor.
                     </p>
                     <motion.button
