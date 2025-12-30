@@ -130,10 +130,13 @@ export default function CartSidebar({ isOpen, onClose, cart, removeFromCart, upd
                                         <form className="space-y-6" onSubmit={handleCheckout}>
                                             <div className="bg-orange-900/20 border border-orange-500/20 p-4 rounded-xl mb-6">
                                                 <h3 className="text-orange-400 text-sm font-bold uppercase mb-2">Order Summary</h3>
-                                                <div className="flex justify-between text-lg font-black">
+                                                <div className="flex justify-between text-lg font-black mb-2">
                                                     <span>Total</span>
                                                     <span>৳{total}</span>
                                                 </div>
+                                                <p className="text-[14px] text-zinc-400 italic mt-2">
+                                                    * Delivery charge will be added based on your distance.
+                                                </p>
                                             </div>
 
                                             <div className="space-y-4">
