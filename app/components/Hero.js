@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const HERO_IMAGES = [
     { src: '/meatbox.png', alt: 'Loaded Meat Box' },
-    { src: '/burger.png', alt: 'Neon Smash Burger' },
-    { src: '/momos.png', alt: 'Spicy Momos' },
-    { src: '/shake.png', alt: 'Electro Shake' },
-    { src: '/nuggets.png', alt: 'Crispy Nuggets' },
+    { src: '/chease.jpg', alt: 'Neon Smash Burger' },
+    { src: '/momos1.jpg', alt: 'Spicy Momos' },
+    { src: '/meatball.png', alt: 'Electro Shake' },
+    { src: '/nuggets.jpg', alt: 'Crispy Nuggets' },
 ];
 
 export default function Hero() {
@@ -15,7 +15,7 @@ export default function Hero() {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentImage((prev) => (prev + 1) % HERO_IMAGES.length);
-        }, 4000);
+        }, 2000);
 
         return () => clearInterval(timer);
     }, []);
@@ -84,7 +84,7 @@ export default function Hero() {
                             initial="hidden"
                             animate={getPosition(index)}
                             variants={variants}
-                            transition={{ duration: 0.8, ease: "easeInOut" }}
+                            transition={{ duration: 0.5, ease: "easeInOut" }}
                         />
                     ))}
 

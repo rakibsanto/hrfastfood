@@ -65,7 +65,7 @@ const FOOD_ITEMS = [
         price: 50,
         // originalPrice: 12.99,
         category: 'Burgers',
-        img: '/burger.png',
+        img: '/mini.jpg',
         description: 'Double beef patty, cheddar, spicy sauce.',
         tags: ['Spicy', 'Popular']
     },
@@ -74,7 +74,7 @@ const FOOD_ITEMS = [
         name: 'Naga Burger',
         price: 70,
         category: 'Burgers',
-        img: '/burger.png',
+        img: '/naga.jpg',
         description: 'Double beef patty, cheddar, spicy sauce.',
         tags: ['Spicy', 'Popular']
     },
@@ -83,7 +83,7 @@ const FOOD_ITEMS = [
         name: 'Cheese Burger',
         price: 70,
         category: 'Burgers',
-        img: '/burger.png',
+        img: '/chease.jpg',
         description: 'Double beef patty, cheddar, spicy sauce.',
         tags: ['Spicy', 'Popular']
     },
@@ -92,7 +92,7 @@ const FOOD_ITEMS = [
         name: 'Burger Pizza',
         price: 100,
         category: 'Burgers',
-        img: '/burger.png',
+        img: '/pizza.jpg',
         description: 'Double beef patty, cheddar, spicy sauce.',
         tags: ['Spicy', 'Popular']
     },
@@ -101,7 +101,7 @@ const FOOD_ITEMS = [
         name: 'Chicken Momos',
         price: 120,
         category: 'Momos',
-        img: '/momos.png',
+        img: '/momos1.jpg',
         description: 'Steamed dumplings served with spicy red chutney.',
         tags: ['Steamed', 'Spicy']
     },
@@ -110,7 +110,7 @@ const FOOD_ITEMS = [
         name: 'B-B-Q Momos',
         price: 120,
         category: 'Momos',
-        img: '/momos.png',
+        img: '/bbg-momos.avif',
         description: 'Steamed dumplings served with spicy red chutney.',
         tags: ['Steamed', 'Spicy']
     },
@@ -119,7 +119,7 @@ const FOOD_ITEMS = [
         name: 'Chicken Nuggets 3 pcs',
         price: 60,
         category: 'Chicken Nuggets',
-        img: '/nuggets.png',
+        img: '/nuggets.jpg',
         description: '10 pcs golden fried nuggets with signature dip.',
         tags: ['Crispy']
     },
@@ -128,7 +128,7 @@ const FOOD_ITEMS = [
         name: 'Chicken Nuggets 5 pcs',
         price: 1000,
         category: 'Chicken Nuggets',
-        img: '/nuggets.png',
+        img: '/nuggets.jpg',
         description: '10 pcs golden fried nuggets with signature dip.',
         tags: ['Crispy']
     },
@@ -146,7 +146,7 @@ const FOOD_ITEMS = [
         name: 'American Mix Chips',
         price: 90,
         category: 'Mix Chips',
-        img: '/fries.png', // Reusing fries image for chips
+        img: '/mix-chips.jpg',
         description: 'Crispy fries tossed with secret masala mix.',
         tags: ['Spicy']
     }
