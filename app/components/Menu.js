@@ -126,7 +126,7 @@ const FOOD_ITEMS = [
     {
         id: 14,
         name: 'Chicken Nuggets 5 pcs',
-        price: 1000,
+        price: 100,
         category: 'Chicken Nuggets',
         img: '/nuggets.jpg',
         description: '10 pcs golden fried nuggets with signature dip.',

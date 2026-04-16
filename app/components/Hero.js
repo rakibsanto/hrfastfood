@@ -59,7 +59,7 @@ export default function Hero() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">Live Kitchen</span>
                     </h2>
                     <p className="text-white text-lg mb-8 max-w-md font-normal leading-relaxed">
-                        Precision-grilled smash burgers, artisanal shakes, and fries that defy gravity. Experience the next level of flavor.
+                        Welcome to <strong>HR FAST FOOD</strong>! Enjoy precision-grilled smash burgers, artisanal shakes, and gravity-defying fries. Experience the best fast food in town.
                     </p>
                     <motion.button
                         whileHover={{ scale: 1.05 }}

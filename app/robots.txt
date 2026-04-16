@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://hrfastfood.netlify.app/sitemap.xml
