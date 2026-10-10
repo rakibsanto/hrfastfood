@@ -10,6 +10,7 @@ export default function FastFoodSite() {
     const [cart, setCart] = useState([]);
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [isInitialized, setIsInitialized] = useState(false);
+    const [activeCategory, setActiveCategory] = useState("All");
 
     // Load cart from local storage on mount
     useEffect(() => {
@@ -71,11 +72,16 @@ export default function FastFoodSite() {
 
     return (
         <div className="min-h-screen bg-black text-white font-sans overflow-x-hidden selection:bg-orange-500 selection:text-white">
-            <Navbar cartCount={cart.reduce((sum, item) => sum + (item.quantity || 1), 0)} setIsCartOpen={setIsCartOpen} />
+            <Navbar 
+                cartCount={cart.reduce((sum, item) => sum + (item.quantity || 1), 0)} 
+                setIsCartOpen={setIsCartOpen}
+                activeCategory={activeCategory}
+                setActiveCategory={setActiveCategory}
+            />
 
             <main>
                 <Hero />
-                <Menu addToCart={addToCart} />
+                <Menu addToCart={addToCart} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
             </main>
 
             <CartSidebar

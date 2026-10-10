@@ -57,7 +57,7 @@ export async function POST(req) {
 Name: ${customer.name}
 Phone: ${customer.phone}
 Address: ${customer.address}
-
+${customer.note ? `📝 *Note:* ${customer.note}\n` : ''}
 🛒 *Order:*
 ${itemsList}
 

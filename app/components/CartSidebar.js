@@ -1,18 +1,40 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Trash2, ArrowRight, CheckCircle, Send, Plus, Minus } from 'lucide-react';
+import Image from 'next/image';
 
 export default function CartSidebar({ isOpen, onClose, cart, removeFromCart, updateQuantity, clearCart }) {
     const [step, setStep] = useState('review'); // review | details | success
     const [loading, setLoading] = useState(false);
-    const [customer, setCustomer] = useState({ name: '', phone: '', address: '' });
+    const [error, setError] = useState('');
+    const [customer, setCustomer] = useState({ name: '', phone: '', address: '', note: '' });
     const [placedOrderNumber, setPlacedOrderNumber] = useState('');
 
     const total = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0).toFixed(2);
 
     const handleCheckout = async (e) => {
         e.preventDefault();
+        setError('');
         setLoading(true);
+
+        if (customer.name.trim().length < 3) {
+            setError("Please enter a valid full name (at least 3 characters).");
+            setLoading(false);
+            return;
+        }
+
+        const phoneRegex = /^\d{11}$/;
+        if (!phoneRegex.test(customer.phone)) {
+            setError("Phone number must be exactly 11 digits.");
+            setLoading(false);
+            return;
+        }
+
+        if (customer.address.trim().length < 10) {
+            setError("Please enter a detailed delivery address (at least 10 characters).");
+            setLoading(false);
+            return;
+        }
 
         const orderDetails = {
             cart: cart,
@@ -86,7 +108,7 @@ export default function CartSidebar({ isOpen, onClose, cart, removeFromCart, upd
                                         <div className="space-y-4">
                                             {cart.map((item, idx) => (
                                                 <div key={idx} className="flex gap-4 items-center bg-zinc-800/50 p-4 rounded-2xl">
-                                                    <img src={item.img} alt={item.name} className="w-16 h-16 object-cover rounded-xl bg-zinc-800" />
+                                                    <Image src={item.img} alt={item.name} width={64} height={64} className="w-16 h-16 object-cover rounded-xl bg-zinc-800" />
                                                     <div className="flex-1">
                                                         <h4 className="font-bold text-sm md:text-base">{item.name}</h4>
                                                         <div className="flex gap-2 items-center">
@@ -139,6 +161,12 @@ export default function CartSidebar({ isOpen, onClose, cart, removeFromCart, upd
                                                 </p>
                                             </div>
 
+                                            {error && (
+                                                <div className="bg-red-500/10 border border-red-500/20 p-3 rounded-xl mb-4 text-red-400 text-sm font-bold text-center">
+                                                    {error}
+                                                </div>
+                                            )}
+
                                             <div className="space-y-4">
                                                 <div>
                                                     <label className="block text-xs uppercase font-bold text-zinc-500 mb-1">Full Name</label>
@@ -155,9 +183,14 @@ export default function CartSidebar({ isOpen, onClose, cart, removeFromCart, upd
                                                     <input
                                                         required
                                                         type="tel"
+                                                        minLength="11"
+                                                        maxLength="11"
                                                         className="w-full bg-zinc-800 border-none rounded-xl p-4 text-white focus:ring-2 focus:ring-orange-500"
                                                         value={customer.phone}
-                                                        onChange={e => setCustomer({ ...customer, phone: e.target.value })}
+                                                        onChange={e => {
+                                                            const val = e.target.value.replace(/\D/g, '').slice(0, 11);
+                                                            setCustomer({ ...customer, phone: val });
+                                                        }}
                                                     />
                                                 </div>
                                                 <div>
@@ -168,6 +201,15 @@ export default function CartSidebar({ isOpen, onClose, cart, removeFromCart, upd
                                                         className="w-full bg-zinc-800 border-none rounded-xl p-4 text-white focus:ring-2 focus:ring-orange-500"
                                                         value={customer.address}
                                                         onChange={e => setCustomer({ ...customer, address: e.target.value })}
+                                                    ></textarea>
+                                                </div>
+                                                <div>
+                                                    <label className="block text-xs uppercase font-bold text-zinc-500 mb-1">Order Note (Optional)</label>
+                                                    <textarea
+                                                        rows="2"
+                                                        className="w-full bg-zinc-800 border-none rounded-xl p-4 text-white focus:ring-2 focus:ring-orange-500"
+                                                        value={customer.note}
+                                                        onChange={e => setCustomer({ ...customer, note: e.target.value })}
                                                     ></textarea>
                                                 </div>
                                             </div>

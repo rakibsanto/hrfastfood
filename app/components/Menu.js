@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
+import Image from 'next/image';
 
-const CATEGORIES = [
+export const CATEGORIES = [
     "All", "Pasta", "Soup", "Chicken Fry", "Momos", "Chau Mein",
     "Fries & Nachos", "Fuchka & Velpuri", "Meat Box", "Burger",
     "Pizza", "Set Menu", "Mix Chips", "Milk Shake", "Drinks", "Coffee", "Tea & Others"
@@ -473,7 +474,7 @@ const FOOD_ITEMS = [
     // Set Menu
     {
         id: 49,
-        name: 'Set Menu 11',
+        name: 'Set Menu 1',
         price: 140,
         category: 'Set Menu',
         img: '/set-menu.jpg',
@@ -482,7 +483,7 @@ const FOOD_ITEMS = [
     },
     {
         id: 50,
-        name: 'Set Menu 12',
+        name: 'Set Menu 2',
         price: 150,
         category: 'Set Menu',
         img: '/set-menu.jpg',
@@ -491,7 +492,7 @@ const FOOD_ITEMS = [
     },
     {
         id: 51,
-        name: 'Set Menu 13',
+        name: 'Set Menu 3',
         price: 160,
         category: 'Set Menu',
         img: '/set-menu.jpg',
@@ -690,8 +691,7 @@ const FOOD_ITEMS = [
     },
 ];
 
-export default function Menu({ addToCart }) {
-    const [activeCategory, setActiveCategory] = useState("All");
+export default function Menu({ addToCart, activeCategory, setActiveCategory }) {
 
     const filteredItems = activeCategory === "All"
         ? FOOD_ITEMS
@@ -736,13 +736,21 @@ export default function Menu({ addToCart }) {
                             >
                                 {/* Image — fills full card width at 4:3 ratio */}
                                 <div className="relative w-full aspect-[4/3] overflow-hidden">
-                                    <motion.img
+                                    <motion.div
                                         whileHover={{ scale: 1.08 }}
                                         transition={{ duration: 0.4, ease: 'easeOut' }}
-                                        src={item.img}
-                                        alt={item.name}
-                                        className="absolute inset-0 w-full h-full object-cover"
-                                    />
+                                        className="absolute inset-0 w-full h-full"
+                                    >
+                                        <Image
+                                            src={item.img}
+                                            alt={item.name}
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            className="object-cover"
+                                            quality={60}
+                                            loading="lazy"
+                                        />
+                                    </motion.div>
                                     {/* Bottom fade overlay */}
                                     <div className="absolute inset-0 pointer-events-none"
                                         style={{ background: 'linear-gradient(to top, rgba(24,24,27,0.92) 0%, rgba(24,24,27,0.25) 45%, transparent 100%)' }}

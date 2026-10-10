@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const HERO_IMAGES = [
     { src: '/pasta.jpg', alt: 'Pasta' },
@@ -87,16 +88,23 @@ export default function Hero() {
                     <div className="absolute inset-0 bg-orange-500/20 blur-[100px] rounded-full" />
 
                     {HERO_IMAGES.map((img, index) => (
-                        <motion.img
+                        <motion.div
                             key={index}
-                            src={img.src}
-                            alt={img.alt}
-                            className="absolute max-w-[80%] max-h-[80%] object-contain drop-shadow-2xl rounded-3xl"
+                            className="absolute w-[80%] h-[80%] drop-shadow-2xl rounded-[2rem] overflow-hidden"
                             initial="hidden"
                             animate={getPosition(index)}
                             variants={variants}
                             transition={{ duration: 0.5, ease: "easeInOut" }}
-                        />
+                        >
+                            <Image
+                                src={img.src}
+                                alt={img.alt}
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                quality={70}
+                                priority={index === 0}
+                            />
+                        </motion.div>
                     ))}
 
 

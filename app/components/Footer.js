@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook } from 'lucide-react';
+import Image from 'next/image';
 
 const WhatsappIcon = ({ size = 16, className = "" }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -15,7 +16,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 items-start">
                     <div className="col-span-1 md:col-span-2">
                         <div className="flex items-center gap-3 mb-6">
-                            <img src="/logo.png" alt="HR Fast Food & Cafe Logo" className="w-10 h-10 rounded-full" />
+                            <Image src="/logo.png" alt="HR Fast Food & Cafe Logo" width={40} height={40} className="rounded-full" />
                             <div className="flex flex-col">
                                 <h2 className="text-2xl font-black italic tracking-tighter leading-none">HR <span className="text-orange-500">FAST FOOD & CAFE</span></h2>
                                 <span className="text-[10px] uppercase font-bold text-white tracking-[0.2em]">It's A Live Kitchen</span>
