@@ -1,4 +1,4 @@
-# 🍔 HR FAST FOOD - Premium Quick Bites
+# 🍔 HR FAST FOOD & CAFE - Premium Quick Bites
 
 A modern, fast-loading, and responsive fast food ordering platform built with Next.js, Framer Motion, and Tailwind CSS. Featuring a seamless shopping experience and direct order integration.
 

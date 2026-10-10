@@ -1,12 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const HERO_IMAGES = [
-    { src: '/meatbox.png', alt: 'Loaded Meat Box' },
-    { src: '/chease.jpg', alt: 'Neon Smash Burger' },
-    { src: '/momos1.jpg', alt: 'Spicy Momos' },
-    { src: '/meatball.png', alt: 'Electro Shake' },
-    { src: '/nuggets.jpg', alt: 'Crispy Nuggets' },
+    { src: '/pasta.jpg', alt: 'Pasta' },
+    { src: '/soup.jpg', alt: 'Soup' },
+    { src: '/crispy-chicken-fry.jpg', alt: 'Chicken Fry' },
+    { src: '/momos.png', alt: 'Momos' },
+    { src: '/chicken-chaumin.jpg', alt: 'Chau Mein' },
+    { src: '/fries.png', alt: 'Fries & Nachos' },
+    { src: '/fuchka.jpg', alt: 'Fuchka & Velpuri' },
+    { src: '/meatbox.png', alt: 'Meat Box' },
+    { src: '/burger.png', alt: 'Burger' },
+    { src: '/chicken-pizza.jpg', alt: 'Pizza' },
+    { src: '/set-menu.jpg', alt: 'Set Menu' },
+    { src: '/mix-chips.jpg', alt: 'Mix Chips' },
+    { src: '/chocolate-shake.jpg', alt: 'Milk Shake' },
+    { src: '/lemonet.jpg', alt: 'Drinks' },
+    { src: '/cold-coffee.png', alt: 'Coffee' },
+    { src: '/milk-tea.png', alt: 'Tea & Others' }
 ];
 
 export default function Hero() {
@@ -59,7 +70,7 @@ export default function Hero() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">Live Kitchen</span>
                     </h2>
                     <p className="text-white text-lg mb-8 max-w-md font-normal leading-relaxed">
-                        Welcome to <strong>HR FAST FOOD</strong>! Enjoy precision-grilled smash burgers, artisanal shakes, and gravity-defying fries. Experience the best fast food in town.
+                        Welcome to <strong>HR FAST FOOD & CAFE</strong>! Enjoy precision-grilled smash burgers, artisanal shakes, and gravity-defying fries. Experience the best fast food in town.
                     </p>
                     <motion.button
                         whileHover={{ scale: 1.05 }}
@@ -88,17 +99,7 @@ export default function Hero() {
                         />
                     ))}
 
-                    {/* Active Image Floating Animation (Only for center image) */}
-                    <AnimatePresence>
-                        {/* We handle the bobbing animation via the style prop or a separate wrapper if needed, 
-                             but simpler to keep variants clean. 
-                             To add the bobbing effect specifically to the center one, we can simply apply it conditionally if needed 
-                             or rely on the variants. The previous bobbing was good. 
-                             Let's re-add a subtle float for the center image using a separate motion.div wrapper or similar if strictly needed.
-                             However, combining layout animations with infinite loops can be tricky in Framer Motion. 
-                             For now, the transition focuses on the slider movement.
-                          */}
-                    </AnimatePresence>
+
                 </div>
             </div>
         </section>

@@ -1,4 +1,12 @@
 import React from 'react';
+import { Facebook } from 'lucide-react';
+
+const WhatsappIcon = ({ size = 16, className = "" }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+        <path d="M16.5 15.25c-.24.7-.97 1.15-1.7 1.15-1.12 0-3.32-1.54-5.32-3.54S6 8.66 6 7.54c0-.73.45-1.46 1.15-1.7l1.04-.37c.36-.13.78-.06 1.05.21l1.41 1.41c.23.23.32.55.24.86l-.27.81c-.13.4.03.85.39 1.09l2 1.33c.33.22.77.21 1.08-.03l.63-.5c.29-.23.68-.28 1.02-.13l1.52.68c.32.14.53.47.47.81l-.33 1.29z" />
+    </svg>
+);
 
 export default function Footer() {
     return (
@@ -7,20 +15,20 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 items-start">
                     <div className="col-span-1 md:col-span-2">
                         <div className="flex items-center gap-3 mb-6">
-                            <img src="/logo.png" alt="HR Fast Food Logo" className="w-10 h-10 rounded-full" />
+                            <img src="/logo.png" alt="HR Fast Food & Cafe Logo" className="w-10 h-10 rounded-full" />
                             <div className="flex flex-col">
-                                <h2 className="text-2xl font-black italic tracking-tighter leading-none">HR <span className="text-orange-500">FAST FOOD</span></h2>
+                                <h2 className="text-2xl font-black italic tracking-tighter leading-none">HR <span className="text-orange-500">FAST FOOD & CAFE</span></h2>
                                 <span className="text-[10px] uppercase font-bold text-white tracking-[0.2em]">It's A Live Kitchen</span>
                             </div>
                         </div>
                         <div className="space-y-3">
                             <div className="flex gap-3 text-sm">
                                 <span className="text-orange-500 font-bold uppercase tracking-wider min-w-[80px]">Location:</span>
-                                <span className="text-zinc-490">Near Boro Bridge (Opposite of Ekota Mike Service)</span>
+                                <a href="https://maps.app.goo.gl/gSmtMhiBbd6LKU1y6" target="_blank" rel="noopener noreferrer" className="text-zinc-490 hover:text-orange-500 transition-colors">Vejaler Mor, Rothghor Road (Beside Edward College Dormitory Building)</a>
                             </div>
                             <div className="flex gap-3 text-sm">
                                 <span className="text-orange-500 font-bold uppercase tracking-wider min-w-[80px]">Phone:</span>
-                                <span className="text-zinc-490">01745-933455</span>
+                                <a href="tel:01745933455" className="text-zinc-490 hover:text-orange-500 transition-colors">01745-933455</a>
                             </div>
                         </div>
                     </div>
@@ -40,12 +48,14 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-zinc-600 text-sm">
-                    <p>&copy; {new Date().getFullYear()} HR Fast Food. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} HR Fast Food & Cafe. All rights reserved.</p>
                     <div className="flex gap-4 mt-4 md:mt-0">
-                        {/* Social Placeholders */}
-                        <div className="w-8 h-8 rounded-full bg-zinc-900 border border-white/5 flex items-center justify-center hover:border-orange-500 hover:text-orange-500 transition-colors cursor-pointer">FB</div>
-                        <div className="w-8 h-8 rounded-full bg-zinc-900 border border-white/5 flex items-center justify-center hover:border-orange-500 hover:text-orange-500 transition-colors cursor-pointer">IG</div>
-                        <div className="w-8 h-8 rounded-full bg-zinc-900 border border-white/5 flex items-center justify-center hover:border-orange-500 hover:text-orange-500 transition-colors cursor-pointer">TW</div>
+                        <a href="https://www.facebook.com/HRfastfoodandcafe" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-zinc-900 border border-white/5 flex items-center justify-center hover:border-[#1877F2] hover:text-[#1877F2] transition-colors cursor-pointer text-zinc-400" title="Follow us on Facebook">
+                            <Facebook size={16} />
+                        </a>
+                        <a href="https://wa.me/8801745933455" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-zinc-900 border border-white/5 flex items-center justify-center hover:border-green-500 hover:text-green-500 transition-colors cursor-pointer text-zinc-400" title="Chat on WhatsApp">
+                            <WhatsappIcon size={16} />
+                        </a>
                     </div>
                 </div>
             </div>

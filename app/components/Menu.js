@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
 
 const CATEGORIES = [
-    "All", "Pasta", "Soup", "Chicken Fry", "Momos", "Chaumin",
+    "All", "Pasta", "Soup", "Chicken Fry", "Momos", "Chau Mein",
     "Fries & Nachos", "Fuchka & Velpuri", "Meat Box", "Burger",
     "Pizza", "Set Menu", "Mix Chips", "Milk Shake", "Drinks", "Coffee", "Tea & Others"
 ];
@@ -73,7 +73,7 @@ const FOOD_ITEMS = [
         name: 'Thai Chicken Fry',
         price: 120,
         category: 'Chicken Fry',
-        img: '/chicken-fry.jpg',
+        img: '/thai-chicken-fry.png',
         description: 'Crispy chicken marinated in Thai spices.',
         tags: ['Crispy', 'Thai']
     },
@@ -82,7 +82,7 @@ const FOOD_ITEMS = [
         name: 'Crispy Chicken Fry',
         price: 120,
         category: 'Chicken Fry',
-        img: '/chicken-fry.jpg',
+        img: '/crispy-chicken-fry.jpg',
         description: 'Golden crispy fried chicken.',
         tags: ['Crispy', 'Popular']
     },
@@ -91,7 +91,7 @@ const FOOD_ITEMS = [
         name: 'Wings BBQ',
         price: 130,
         category: 'Chicken Fry',
-        img: '/chicken-fry.jpg',
+        img: '/wings-bbq.jpg',
         description: 'Grilled chicken wings with BBQ sauce.',
         tags: ['BBQ', 'Smoky']
     },
@@ -100,7 +100,7 @@ const FOOD_ITEMS = [
         name: 'Naga Wings',
         price: 130,
         category: 'Chicken Fry',
-        img: '/chicken-fry.jpg',
+        img: '/naga-wings.jpg',
         description: 'Chicken wings marinated with spicy naga chili.',
         tags: ['Spicy', 'Naga']
     },
@@ -109,7 +109,7 @@ const FOOD_ITEMS = [
         name: 'Lollipop BBQ',
         price: 160,
         category: 'Chicken Fry',
-        img: '/chicken-fry.jpg',
+        img: '/lollipop-bbq.jpg',
         description: 'BBQ glazed lollipop chicken.',
         tags: ['BBQ', 'Juicy']
     },
@@ -118,7 +118,7 @@ const FOOD_ITEMS = [
         name: 'Lollipop Naga',
         price: 160,
         category: 'Chicken Fry',
-        img: '/chicken-fry.jpg',
+        img: '/lollipop-bbq.jpg',
         description: 'Spicy lollipop chicken with naga seasoning.',
         tags: ['Spicy', 'Hot']
     },
@@ -163,32 +163,32 @@ const FOOD_ITEMS = [
         tags: ['Fried', 'Crispy']
     },
 
-    // 6. Chaumin
+    // 6. Chau Mein
     {
         id: 17,
-        name: 'Chicken Chaumin',
+        name: 'Chicken Chau Mein',
         price: 120,
-        category: 'Chaumin',
-        img: '/chaumin.jpg',
-        description: 'Chaumin made with chicken and vegetables.',
+        category: 'Chau Mein',
+        img: '/chicken-chaumin.jpg',
+        description: 'Chau Mein made with chicken and vegetables.',
         tags: ['Popular', 'Savory']
     },
     {
         id: 18,
-        name: 'Naga Chaumin',
+        name: 'Naga Chau Mein',
         price: 150,
-        category: 'Chaumin',
-        img: '/chaumin.jpg',
-        description: 'Spicy chaumin with naga chili flavor.',
+        category: 'Chau Mein',
+        img: '/naga-chau-mein.jpg',
+        description: 'Spicy chau mein with naga chili flavor.',
         tags: ['Spicy', 'Naga']
     },
     {
         id: 19,
-        name: 'Special Chaumin',
+        name: 'Special Chau Mein',
         price: 200,
-        category: 'Chaumin',
+        category: 'Chau Mein',
         img: '/chaumin.jpg',
-        description: 'Special chaumin with chicken, vegetables and unique spices.',
+        description: 'Special chau mein with chicken, vegetables and unique spices.',
         tags: ['Special', 'Best Seller']
     },
 
@@ -216,7 +216,7 @@ const FOOD_ITEMS = [
     {
         id: 22,
         name: 'Nachos Special',
-        price: 160,
+        price: 180,
         category: 'Fries & Nachos',
         img: '/nachos.jpg',
         description: 'Special nachos platter with all toppings.',
@@ -238,7 +238,7 @@ const FOOD_ITEMS = [
         name: 'Velpuri',
         price: 40,
         category: 'Fuchka & Velpuri',
-        img: '/fuchka.jpg',
+        img: '/velpuri.png',
         description: 'Puffed rice, chanachur and chutney mix.',
         tags: ['Street Food', 'Tangy']
     },
@@ -305,7 +305,7 @@ const FOOD_ITEMS = [
     {
         id: 31,
         name: 'Naga Pizza (8")',
-        price: 280,
+        price: 240,
         category: 'Pizza',
         img: '/naga-pizza.jpg',
         description: 'Pizza with spicy naga chili toppings.',
@@ -314,7 +314,7 @@ const FOOD_ITEMS = [
     {
         id: 32,
         name: 'Naga Pizza (10")',
-        price: 380,
+        price: 340,
         category: 'Pizza',
         img: '/naga-pizza.jpg',
         description: 'Medium pizza with spicy naga chili toppings.',
@@ -323,7 +323,7 @@ const FOOD_ITEMS = [
     {
         id: 33,
         name: 'Naga Pizza (12")',
-        price: 880,
+        price: 440,
         category: 'Pizza',
         img: '/naga-pizza.jpg',
         description: 'Large pizza with spicy naga chili toppings.',
@@ -333,7 +333,7 @@ const FOOD_ITEMS = [
     {
         id: 34,
         name: 'BBQ Pizza (8")',
-        price: 280,
+        price: 240,
         category: 'Pizza',
         img: '/bbq-pizza.jpg',
         description: 'Pizza made with smoky BBQ sauce.',
@@ -342,7 +342,7 @@ const FOOD_ITEMS = [
     {
         id: 35,
         name: 'BBQ Pizza (10")',
-        price: 380,
+        price: 340,
         category: 'Pizza',
         img: '/bbq-pizza.jpg',
         description: 'Medium pizza with smoky BBQ sauce.',
@@ -351,7 +351,7 @@ const FOOD_ITEMS = [
     {
         id: 36,
         name: 'BBQ Pizza (12")',
-        price: 880,
+        price: 440,
         category: 'Pizza',
         img: '/bbq-pizza.jpg',
         description: 'Large pizza with smoky BBQ sauce.',
@@ -503,7 +503,7 @@ const FOOD_ITEMS = [
         name: 'Extra Rice',
         price: 60,
         category: 'Set Menu',
-        img: '/set-menu.jpg',
+        img: '/extra-rice.jpg',
         description: 'Extra rice with set menu.',
         tags: ['Add-on']
     },
@@ -525,7 +525,7 @@ const FOOD_ITEMS = [
         name: 'Vanilla Mix Shake',
         price: 130,
         category: 'Milk Shake',
-        img: '/milkshake.jpg',
+        img: '/vanilla-shake.jpg',
         description: 'Creamy vanilla milkshake.',
         tags: ['Cold', 'Sweet']
     },
@@ -534,7 +534,7 @@ const FOOD_ITEMS = [
         name: 'Chocolate Mix Shake',
         price: 130,
         category: 'Milk Shake',
-        img: '/milkshake.jpg',
+        img: '/chocolate-shake.jpg',
         description: 'Rich chocolate milkshake.',
         tags: ['Cold', 'Chocolate']
     },
@@ -543,7 +543,7 @@ const FOOD_ITEMS = [
         name: 'Strawberry Mix Shake',
         price: 130,
         category: 'Milk Shake',
-        img: '/milkshake.jpg',
+        img: '/strawberry-shake.jpg',
         description: 'Fresh strawberry milkshake.',
         tags: ['Cold', 'Fruity']
     },
@@ -552,7 +552,7 @@ const FOOD_ITEMS = [
         name: 'Mango Mix Shake',
         price: 130,
         category: 'Milk Shake',
-        img: '/milkshake.jpg',
+        img: '/mango-shake.jpg',
         description: 'Milkshake made with real mango.',
         tags: ['Cold', 'Mango']
     },
@@ -561,7 +561,7 @@ const FOOD_ITEMS = [
         name: 'KitKat Mix Shake',
         price: 150,
         category: 'Milk Shake',
-        img: '/milkshake.jpg',
+        img: '/kitkat-shake.jpg',
         description: 'Premium shake made with KitKat and chocolate.',
         tags: ['Cold', 'Special']
     },
@@ -570,7 +570,7 @@ const FOOD_ITEMS = [
         name: 'Faluda Mix',
         price: 180,
         category: 'Milk Shake',
-        img: '/milkshake.jpg',
+        img: '/faluda.jpg',
         description: 'Faluda made with rose syrup, basil seeds and vermicelli.',
         tags: ['Cold', 'Traditional']
     },
@@ -579,7 +579,7 @@ const FOOD_ITEMS = [
         name: 'Lassi',
         price: 100,
         category: 'Milk Shake',
-        img: '/milkshake.jpg',
+        img: '/lassi.jpg',
         description: 'Cold lassi made from fresh yogurt.',
         tags: ['Cold', 'Refreshing']
     },
@@ -590,7 +590,7 @@ const FOOD_ITEMS = [
         name: 'Mint Lemon',
         price: 60,
         category: 'Drinks',
-        img: '/drinks.jpg',
+        img: '/mint-lemon.jpg',
         description: 'Refreshing drink made with mint and lemon.',
         tags: ['Cold', 'Refreshing']
     },
@@ -599,7 +599,7 @@ const FOOD_ITEMS = [
         name: 'Lemonet',
         price: 40,
         category: 'Drinks',
-        img: '/drinks.jpg',
+        img: '/lemonet.jpg',
         description: 'Fresh lemon juice.',
         tags: ['Cold', 'Classic']
     },
@@ -610,7 +610,7 @@ const FOOD_ITEMS = [
         name: 'Hot Coffee',
         price: 80,
         category: 'Coffee',
-        img: '/coffee.jpg',
+        img: '/hot-coffee.jpg',
         description: 'Hot latte art coffee.',
         tags: ['Hot', 'Classic']
     },
@@ -619,7 +619,7 @@ const FOOD_ITEMS = [
         name: 'Black Coffee',
         price: 50,
         category: 'Coffee',
-        img: '/coffee.jpg',
+        img: '/black-coffee.jpg',
         description: 'Strong black espresso coffee.',
         tags: ['Hot', 'Strong']
     },
@@ -628,7 +628,7 @@ const FOOD_ITEMS = [
         name: 'Cold Coffee',
         price: 100,
         category: 'Coffee',
-        img: '/coffee.jpg',
+        img: '/cold-coffee.png',
         description: 'Iced cold coffee.',
         tags: ['Cold', 'Refreshing']
     },
@@ -637,7 +637,7 @@ const FOOD_ITEMS = [
         name: 'Chocolate Cold Coffee',
         price: 120,
         category: 'Coffee',
-        img: '/coffee.jpg',
+        img: '/chocolate-cold-coffee.jpg',
         description: 'Cold coffee with chocolate syrup.',
         tags: ['Cold', 'Chocolate']
     },
@@ -648,7 +648,7 @@ const FOOD_ITEMS = [
         name: 'Milk Tea',
         price: 30,
         category: 'Tea & Others',
-        img: '/tea.jpg',
+        img: '/milk-tea.png',
         description: 'Traditional Bangladeshi milk tea.',
         tags: ['Hot', 'Classic']
     },
@@ -657,7 +657,7 @@ const FOOD_ITEMS = [
         name: 'Malai Cha',
         price: 40,
         category: 'Tea & Others',
-        img: '/tea.jpg',
+        img: '/malai-cha.png',
         description: 'Special tea made with creamy malai.',
         tags: ['Hot', 'Creamy']
     },
@@ -666,7 +666,7 @@ const FOOD_ITEMS = [
         name: 'Malai Ruti',
         price: 70,
         category: 'Tea & Others',
-        img: '/tea.jpg',
+        img: '/malai-ruti.png',
         description: 'Bread served with malai cream.',
         tags: ['Hot', 'Special']
     },
@@ -675,7 +675,7 @@ const FOOD_ITEMS = [
         name: 'Malai Ruti Special',
         price: 100,
         category: 'Tea & Others',
-        img: '/tea.jpg',
+        img: '/malai-ruti.png',
         description: 'Special bread with extra malai and nuts.',
         tags: ['Hot', 'Premium']
     },
@@ -684,7 +684,7 @@ const FOOD_ITEMS = [
         name: 'Milk Danish',
         price: 100,
         category: 'Tea & Others',
-        img: '/tea.jpg',
+        img: '/milk-danish.png',
         description: 'Sweet milk and danish pastry combo.',
         tags: ['Sweet', 'Special']
     },

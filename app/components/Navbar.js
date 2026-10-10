@@ -6,10 +6,10 @@ export default function Navbar({ cartCount, setIsCartOpen }) {
     return (
         <nav className="fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center backdrop-blur-md bg-black/50 border-b border-white/5">
             <div className="flex items-center gap-3 cursor-pointer group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                <img src="/logo.png" alt="HR Fast Food Logo" className="w-12 h-12 rounded-full border-2 border-orange-500/50 group-hover:border-orange-500 transition-all shadow-lg" />
+                <img src="/logo.png" alt="HR Fast Food & Cafe Logo" className="w-12 h-12 rounded-full border-2 border-orange-500/50 group-hover:border-orange-500 transition-all shadow-lg" />
                 <div className="flex flex-col">
                     <h1 className="text-xl font-black italic tracking-tighter text-white leading-none">
-                        HR <span className="text-orange-500">FAST FOOD</span>
+                        HR <span className="text-orange-500">FAST FOOD & CAFE</span>
                     </h1>
                     <span className="text-[10px] uppercase font-bold text-white tracking-[0.2em]">It's A Live Kitchen</span>
                 </div>

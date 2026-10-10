@@ -4,28 +4,28 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-    title: 'HR FAST FOOD | Best Burgers, Fries & Shakes',
-    description: 'Looking for the best fast food? HR FAST FOOD offers precision-grilled smash burgers, artisanal shakes, and gravity-defying fries. Visit HR FAST FOOD today!',
-    keywords: ['HR FAST FOOD', 'hr fast food menu', 'best fast food', 'smash burgers', 'artisanal shakes', 'fast food restaurant'],
-    authors: [{ name: 'HR FAST FOOD' }],
-    creator: 'HR FAST FOOD',
-    publisher: 'HR FAST FOOD',
+    title: 'HR FAST FOOD & CAFE | Best Burgers, Fries & Shakes',
+    description: 'Looking for the best fast food? HR FAST FOOD & CAFE offers precision-grilled smash burgers, artisanal shakes, and gravity-defying fries. Visit HR FAST FOOD & CAFE today!',
+    keywords: ['HR FAST FOOD & CAFE', 'HR FAST FOOD', 'hr fast food menu', 'best fast food', 'smash burgers', 'artisanal shakes', 'fast food restaurant'],
+    authors: [{ name: 'HR FAST FOOD & CAFE' }],
+    creator: 'HR FAST FOOD & CAFE',
+    publisher: 'HR FAST FOOD & CAFE',
     formatDetection: {
         email: false,
         address: false,
         telephone: false,
     },
     openGraph: {
-        title: 'HR FAST FOOD | Best Burgers & Fast Food',
-        description: 'Taste the best fast food at HR FAST FOOD! Precision-grilled smash burgers, artisanal shakes, and gravity-defying fries await you.',
+        title: 'HR FAST FOOD & CAFE | Best Burgers & Fast Food',
+        description: 'Taste the best fast food at HR FAST FOOD & CAFE! Precision-grilled smash burgers, artisanal shakes, and gravity-defying fries await you.',
         url: 'https://hrfastfood.netlify.app',
-        siteName: 'HR FAST FOOD',
+        siteName: 'HR FAST FOOD & CAFE',
         images: [
             {
                 url: '/icon.png',
                 width: 800,
                 height: 600,
-                alt: 'HR FAST FOOD Logo',
+                alt: 'HR FAST FOOD & CAFE Logo',
             },
         ],
         locale: 'en_US',
@@ -33,8 +33,8 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'HR FAST FOOD | Best Fast Food Experience',
-        description: 'Experience HR FAST FOOD! Premium quality smash burgers, loaded fries, and more.',
+        title: 'HR FAST FOOD & CAFE | Best Fast Food Experience',
+        description: 'Experience HR FAST FOOD & CAFE! Premium quality smash burgers, loaded fries, and more.',
         images: ['/icon.png'],
     },
     icons: {

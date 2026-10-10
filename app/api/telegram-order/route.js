@@ -63,7 +63,7 @@ ${itemsList}
 
 💰 *Total: ৳${total}*
 
-_Sent via HR Fast Food Web_`;
+_Sent via HR Fast Food & Cafe Web_`;
 
         const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
